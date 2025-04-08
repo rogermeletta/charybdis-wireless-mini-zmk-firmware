@@ -39,4 +39,4 @@
 		device = <&trackball>;
 		relay-channel = <111>;
 	};
-}
+};
