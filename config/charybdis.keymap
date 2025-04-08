@@ -38,7 +38,7 @@
     /* Left side trackball - input config for scroll mode */
     left_trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&vtrackball>;
         layers = <0 2 7 9>;
         evt-type = <INPUT_EV_REL>;            
         x-input-code = <INPUT_REL_MISC>;
