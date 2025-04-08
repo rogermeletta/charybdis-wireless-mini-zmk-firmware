@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
   - DEV TOOLS
@@ -286,8 +287,8 @@ layers:
   - MUTE
   - VOLUME DOWN
   - VOLUME UP
-  - PRINT SCREEN
   - ZMK Studio
+  - PRINT SCREEN
   - ''
   - ''
   - ''
