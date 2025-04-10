@@ -11,7 +11,7 @@
 
 / {
     /* Right side trackball - input config for mouse move mode */
-    right_trackball_listener {
+    trackball_mouse_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball_right>;
         layers = <0 2 7>;
@@ -22,8 +22,8 @@
         scale-divisor = <5>;
     };
 
-    /* Right side trackball - input config for snipe mode */
-    right_trackball_snipe_listener {
+    /* Snipe mode trackball config */
+    trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
         device = <&vtrackball_right>;
         layers = <8>;
@@ -47,7 +47,7 @@
     };
 
     /* Left side trackball - input config for scroll mode when in special layers */
-    left_trackball_scroll_listener {
+    trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball_left>;
         layers = <9>;
