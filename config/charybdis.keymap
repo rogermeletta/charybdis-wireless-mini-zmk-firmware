@@ -11,10 +11,9 @@
 
 / {
     /* Right side trackball - input config for mouse move mode */
-    /* Trackball for mouse movement */
-    trackball_mouse_listener {
+    right_trackball_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&vtrackball_right>;
         layers = <0 2 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -23,10 +22,10 @@
         scale-divisor = <5>;
     };
 
-    /* Snipe mode trackball config */
-    trackball_snipe_listener {
+    /* Right side trackball - input config for snipe mode */
+    right_trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
-        device = <&trackball>;
+        device = <&vtrackball_right>;
         layers = <8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -35,10 +34,22 @@
         scale-divisor = <6>;
     };
 
-    /* Scroll mode for special layers */
-    trackball_scroll_listener {
+    /* Left side trackball - input config for pointer mode */
+    left_trackball_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&vtrackball_left>;
+        layers = <0 2 7>;
+        evt-type = <INPUT_EV_REL>;            
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <4>;
+        scale-divisor = <5>;
+    };
+
+    /* Left side trackball - input config for scroll mode when in special layers */
+    left_trackball_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball_left>;
         layers = <9>;
         evt-type = <INPUT_EV_REL>;            
         x-input-code = <INPUT_REL_MISC>;
