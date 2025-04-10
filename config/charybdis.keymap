@@ -13,20 +13,19 @@
     /* Right side trackball - input config for mouse move mode */
     right_trackball_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
+        device = <&vrtrackball>;
         layers = <0 2 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <4>;
         scale-divisor = <5>;
-        // bindings = <&ib_toggle_layer 7>;
     };
 
     /* Right side trackball - input config for snipe mode */
     right_trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
-        device = <&vtrackball>;
+        device = <&vrtrackball>;
         layers = <8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -35,11 +34,23 @@
         scale-divisor = <6>;
     };
 
-    /* Left side trackball - input config for scroll mode */
+    /* Left side trackball - input config for pointer mode */
+    left_trackball_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vltrackball>;
+        layers = <0 2 7>;
+        evt-type = <INPUT_EV_REL>;            
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <4>;
+        scale-divisor = <5>;
+    };
+
+    /* Left side trackball - input config for scroll mode when in special layers */
     left_trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <0 2 7 9>;
+        device = <&vltrackball>;
+        layers = <9>;
         evt-type = <INPUT_EV_REL>;            
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -92,7 +103,7 @@
 // ├──────────────┼──────────────┼─────────────────────────────┼──────────────────────────────────┼──────────────────────┤                ├────────────────┼─────────────────────────┼──────────────────────────────────────┼────────────────────────────────────┼────────────────────────┤
     &kp Z           &kp X          &kp C                          &kp V                             &kp B                                    &kp N             &kp M                      &kp COMMA                              &kp PERIOD                           &kp SLASH
 // ╰──────────────┴──────────────┴─────────────────────────────┼──────────────────────────────────┼──────────────────────┼───────────╮  ╭──────────────────┼─────────────────────────┼──────────────────────────────────────┴────────────────────────────────────┴────────────────────────╯
-                                                                  &lt 7 RETURN                    &mkp LCLK                 &td_bs          &lt 7 RETURN      &td_space                 &td_bs
+                                                                  &lt 7 RETURN                    &mkp LCLK                 &td_bs          &lt 9 RETURN      &td_space                 &td_bs
                                                               // ╰────────────────────────────────┴──────────────────────┴───────────╯  ╰──────────────────┴─────────────────────────┴────────────╯
             >;
         };
@@ -212,13 +223,13 @@
         SCROLL {
             bindings = <
 // ╭──────────────┬──────────────┬─────────────────────────────┬──────────────────────────────────┬──────────────────────╮                ╭──────────────┬─────────────────────┬──────────────────────────────────┬────────────────────────────────────┬────────────────────────╮
-    &trans         &trans         &trans                         &trans                            &trans                                  &trans             &trans                    &trans                                  &trans                               &trans                   
+    &none          &none          &none                          &none                             &none                                   &none              &none                     &none                                  &none                               &none                   
 // ├──────────────┼──────────────┼─────────────────────────────┼──────────────────────────────────┼──────────────────────┤                ├──────────────┼─────────────────────┼──────────────────────────────────┼────────────────────────────────────┼────────────────────────┤
-    &trans         &trans         &trans                         &trans                            &trans                                  &trans             &trans                    &trans                                  &trans                               &trans                   
+    &none          &none          &none                          &none                             &none                                   &none              &none                     &none                                  &none                               &none                   
 // ├──────────────┼──────────────┼─────────────────────────────┼──────────────────────────────────┼──────────────────────┤                ├──────────────┼─────────────────────┼──────────────────────────────────┼────────────────────────────────────┼────────────────────────┤
-    &trans         &trans         &trans                         &trans                            &trans                                  &trans             &trans                    &trans                                  &trans                               &trans                   
+    &none          &none          &none                          &none                             &none                                   &none              &none                     &none                                  &none                               &none                   
 // ╰──────────────┴──────────────┴─────────────────────────────┼──────────────────────────────────┼──────────────────────┼─────────╮  ╭──────────────┼─────────────────────┼──────────────────────────────────┴────────────────────────────────────┴────────────────────────╯
-                                                                  &trans                            &trans                  &trans          &trans             &trans                    &trans                  
+                                                                  &trans                            &mkp LCLK                &to 0           &trans             &mkp RCLK                 &to 0                  
                                                                // ╰────────────────────────────────┴──────────────────────┴─────────╯  ╰─────────────────────┴──────────────────────┴─────────╯           
             >;
         };
