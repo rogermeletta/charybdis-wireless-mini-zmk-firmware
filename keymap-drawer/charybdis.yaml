@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - /
-  - SCRL SLOW
+  - {t: RETURN, h: MOUSE}
   - L CLK
   - '&td_bs'
   - {t: RETURN, h: MOUSE}
   - '&td_space'
-  - L_BASE L_PHOTO L_GAME
+  - '&td_bs'
   NUM:
   - ''
   - ''
@@ -290,10 +290,10 @@ layers:
   - ''
   - ''
   - ''
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: RETURN, type: held}
+  - RETURN
   - {t: ▽, type: trans}
   - ''
   SLOW:
