@@ -10,22 +10,23 @@
 #include "combos.dtsi"
 
 / {
-    /* Trackball for mouse movement */
-    trackball_pointer {
+    /* input config for mouse move mode */
+    trackball_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&vtrackball>;
         layers = <0 2 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <4>;
         scale-divisor = <5>;
+        // bindings = <&ib_toggle_layer 7>;
     };
 
-    /* Trackball for snipe mode */
-    trackball_snipe {
+    /* input config for snipe mode */
+    trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
-        device = <&trackball>;
+        device = <&vtrackball>;
         layers = <8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -34,10 +35,10 @@
         scale-divisor = <6>;
     };
 
-    /* Trackball for scroll mode */
-    trackball_scroll {
+    /* input config for mouse scroll mode */
+    trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&vtrackball>;
         layers = <9>;
         evt-type = <INPUT_EV_REL>;            
         x-input-code = <INPUT_REL_MISC>;
@@ -91,8 +92,8 @@
 // ├──────────────┼──────────────┼─────────────────────────────┼──────────────────────────────────┼──────────────────────┤                ├────────────────┼─────────────────────────┼──────────────────────────────────────┼────────────────────────────────────┼────────────────────────┤
     &kp Z           &kp X          &kp C                          &kp V                             &kp B                                    &kp N             &kp M                      &kp COMMA                              &kp PERIOD                           &kp SLASH
 // ╰──────────────┴──────────────┴─────────────────────────────┼──────────────────────────────────┼──────────────────────┼───────────╮  ╭──────────────────┼─────────────────────────┼──────────────────────────────────────┴────────────────────────────────────┴────────────────────────╯
-                                                                  &lt 7 RETURN                    &mkp LCLK                 &td_bs          &lt 9 RETURN      &td_space                 &td_bs
-                                                              // ╰────────────────────────────────┴──────────────────────┴───────────╯  ╰──────────────────┴─────────────────────────┴────────────╯
+                                                                  &lt 7 RETURN                      &mkp LCLK               &td_bs           &td_bs            &lt 9 RETURN               &td_space    
+                                                              // ╰────────────────────────────────┴──────────────────────┴───────────╯  ╰──────────────────┴─────────────────────────┴────────────────╯
             >;
         };
 

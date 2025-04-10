@@ -34,9 +34,9 @@ layers:
   - {t: RETURN, h: MOUSE}
   - L CLK
   - '&td_bs'
+  - '&td_bs'
   - {t: RETURN, h: SCROLL}
   - '&td_space'
-  - '&td_bs'
   NUM:
   - ''
   - ''
@@ -367,8 +367,8 @@ layers:
   - {t: ▽, type: trans}
   - L CLK
   - {t: BASE, h: toggle}
-  - {type: held}
-  - R CLK
+  - {t: ▽, type: trans}
+  - {t: R CLK, type: held}
   - {t: BASE, h: toggle}
 combos:
 - p: [14, 15]

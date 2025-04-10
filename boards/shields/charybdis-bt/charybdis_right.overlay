@@ -26,11 +26,27 @@
 		;
 };
 
-
-&trackball_split { 
-	device = <&trackball>;
+&spi0 {
+    status = "okay";
 };
 
-&trackball_split2 {
-  status = "disabled";
+&trackball {
+    status = "okay";
+};
+
+// https://github.com/badjeff/zmk-pmw3610-driver
+/ {
+  vtrackball_left: virtual_input_trackball_left {
+    compatible = "zmk,virtual-input";
+    status = "disabled";
+  };
+  
+  vtrackball_right: virtual_input_trackball_right {
+    compatible = "zmk,virtual-input";
+  };
+
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+  };
 };
