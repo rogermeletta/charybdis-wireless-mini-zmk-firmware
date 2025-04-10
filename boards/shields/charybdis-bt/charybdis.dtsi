@@ -33,7 +33,6 @@
         diode-direction = "row2col";
     };
     
-/ {
   split_inputs {
     #address-cells = <1>;
     #size-cells = <0>;
@@ -71,5 +70,4 @@
       input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 12>, <&zip_xy_to_scroll_mapper>;
     };
   };
-};
 };
