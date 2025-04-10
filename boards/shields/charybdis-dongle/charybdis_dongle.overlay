@@ -14,13 +14,23 @@
 };
 
 / {
-	vtrackball: virtual_input_trackball {
+	vtrackball_left: virtual_input_trackball_left {
 		compatible = "zmk,virtual-input";
 	};
 
-	input_relay_config_trackball {
+	vtrackball_right: virtual_input_trackball_right {
+		compatible = "zmk,virtual-input";
+	};
+
+	input_relay_config_trackball_left {
 		compatible = "zmk,split-peripheral-input-relay";
-		device = <&vtrackball>;
+		device = <&vtrackball_left>;
+		relay-channel = <110>;
+	};
+
+	input_relay_config_trackball_right {
+		compatible = "zmk,split-peripheral-input-relay";
+		device = <&vtrackball_right>;
 		relay-channel = <111>;
 	};
 };
