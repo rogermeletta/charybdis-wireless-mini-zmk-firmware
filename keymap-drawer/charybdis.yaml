@@ -31,9 +31,9 @@ layers:
   - ','
   - .
   - /
-  - {t: ESC, h: SCROLL}
+  - '&td_esc'
   - L CLK
-  - {t: TAB, h: SCROLL}
+  - '&td_tab'
   - {t: RETURN, h: MOUSE}
   - '&td_space'
   - '&td_bs'
@@ -364,7 +364,7 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - L CLK
   - {t: BASE, h: toggle}
   - {t: ▽, type: trans}
