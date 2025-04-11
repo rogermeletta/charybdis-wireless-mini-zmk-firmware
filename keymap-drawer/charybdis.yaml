@@ -15,7 +15,7 @@ layers:
   - {t: S, h: LEFT ALT}
   - {t: D, h: LCTRL}
   - {t: F, h: LEFT SHIFT}
-  - G
+  - {t: G, h: SLOW}
   - H
   - {t: J, h: RIGHT SHIFT}
   - {t: K, h: RCTRL}
@@ -311,7 +311,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -347,7 +347,7 @@ layers:
   - ''
   - ''
   - ''
-  - SLOW
+  - ''
   - ''
   - ''
   - ''
