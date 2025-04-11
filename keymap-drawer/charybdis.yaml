@@ -82,7 +82,7 @@ layers:
   - ''
   - '&detach_session'
   - '&create_or_attach'
-  - '&next_pane'
+  - UP
   - '&show_sessions'
   - '&sync_panes'
   - {t: ▽, type: trans}
@@ -93,8 +93,8 @@ layers:
   - HSPLIT
   - LEFT
   - DOWN
-  - UP
   - RIGHT
+  - RETURN
   - ''
   - ''
   - ''
