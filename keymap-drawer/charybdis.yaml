@@ -31,9 +31,9 @@ layers:
   - ','
   - .
   - /
-  - {t: RETURN, h: SCROLL}
+  - {t: ESC, h: SCROLL}
   - L CLK
-  - '&td_bs'
+  - {t: TAB, h: SCROLL}
   - {t: RETURN, h: MOUSE}
   - '&td_space'
   - '&td_bs'
