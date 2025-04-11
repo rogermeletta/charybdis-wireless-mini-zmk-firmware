@@ -19,7 +19,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <4>;
-        scale-divisor = <5>;
+        scale-divisor = <6>;
         // bindings = <&ib_toggle_layer 7>;
     };
 
