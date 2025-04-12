@@ -21,18 +21,8 @@
 		;
 };
 
-&spi0 {
-    status = "okay";
-};
-
-&trackball {
-    status = "okay";
-};
-
 / {
-	input_relay_config_trackball {
-		compatible = "zmk,split-peripheral-input-relay";
-		device = <&trackball>;
-		relay-channel = <110>;
+	vtrackball: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
 	};
 };
