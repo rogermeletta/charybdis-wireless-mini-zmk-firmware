@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  BASE:
+  Base:
   - Q
   - W
   - E
@@ -15,7 +15,7 @@ layers:
   - {t: S, h: LEFT ALT}
   - {t: D, h: LCTRL}
   - {t: F, h: LEFT SHIFT}
-  - {t: G, h: SLOW}
+  - {t: G, h: Slow}
   - H
   - {t: J, h: RIGHT SHIFT}
   - {t: K, h: RCTRL}
@@ -34,10 +34,10 @@ layers:
   - '&td_esc'
   - L CLK
   - '&td_tab'
-  - {t: RETURN, h: MOUSE}
+  - {t: RETURN, h: Mouse}
   - '&td_space'
   - '&td_bs'
-  NUM:
+  Num:
   - ''
   - ''
   - ''
@@ -74,7 +74,7 @@ layers:
   - .
   - '0'
   - ''
-  NAV:
+  Nav:
   - ''
   - ''
   - ''
@@ -111,7 +111,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  SYM:
+  Symbols:
   - ''
   - ''
   - ''
@@ -148,7 +148,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  GAME:
+  Game:
   - TAB
   - Q
   - W
@@ -185,7 +185,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  PHOTOS:
+  Photos:
   - TAG Z
   - TAG E
   - TAG A
@@ -222,7 +222,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  EXTRAS:
+  Extra:
   - SHRUG
   - LGTM
   - GIT COMMIT
@@ -259,7 +259,7 @@ layers:
   - ''
   - ''
   - BT CLR
-  MOUSE:
+  Mouse:
   - WHEEL L
   - WHEEL D
   - MOVE UP
@@ -296,7 +296,7 @@ layers:
   - {t: RETURN, type: held}
   - {t: ▽, type: trans}
   - ''
-  SLOW:
+  Slow:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -333,7 +333,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  SCROLL:
+  Scroll:
   - ''
   - ''
   - ''
@@ -366,29 +366,29 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - L CLK
-  - {t: BASE, h: toggle}
+  - {t: Base, h: toggle}
   - {t: ▽, type: trans}
   - R CLK
-  - {t: BASE, h: toggle}
+  - {t: Base, h: toggle}
 combos:
 - p: [14, 15]
   k: CAPS WORD
-  l: [BASE]
+  l: [Base]
 - p: [23, 31]
   k: Mid CLK
 - p: [13, 31]
   k: R CLK
 - p: [17, 18]
   k: )
-  l: [SYM]
+  l: [Symbols]
 - p: [18, 19]
   k: ']'
-  l: [SYM]
+  l: [Symbols]
 - p: [7, 8]
   k: '}'
-  l: [SYM]
+  l: [Symbols]
 - p: [27, 28]
   k: '>'
-  l: [SYM]
+  l: [Symbols]
 - p: [32, 33]
   k: L_BASE L_EXTRA
