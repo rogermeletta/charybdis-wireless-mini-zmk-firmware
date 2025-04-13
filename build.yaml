@@ -55,4 +55,4 @@ include:
     artifact-name: firmware_reset_nano_v2
   - board: seeeduino_xiao_ble
     shield: settings_reset
-    artifact-name: xiao_settings_reset
+    artifact-name: firmware_reset_xiao
