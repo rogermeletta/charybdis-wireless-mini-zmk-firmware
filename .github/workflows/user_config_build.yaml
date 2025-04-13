@@ -285,7 +285,7 @@ jobs:
         uses: actions/upload-artifact/merge@v4
         with:
           pattern: artifact-firmware_reset_xiao
-          name: firmware-reset-nanov2
+          name: firmware-reset-xiao
           delete-merged: true
 
       - name: Delete keymap artifacts
